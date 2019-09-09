@@ -10,6 +10,7 @@ public class Constructor {
     }
 
     private void createCat() {
+
         mruczek = new Cat("Mruczek", 1);
     }
 }

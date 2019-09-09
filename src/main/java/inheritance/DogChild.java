@@ -1,6 +1,6 @@
 package inheritance;
 
-public class DogChild extends Animal{
+public class DogChild extends Animal {
 
     public DogChild(String name, int age) {
         super(name);

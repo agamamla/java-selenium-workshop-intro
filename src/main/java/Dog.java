@@ -4,13 +4,14 @@ public class Dog {
     private String colour;
     private int age;
 
-    private void bark() {
-        System.out.println("hau hau!");
-    }
-
     public void setDogData(String name, String colour, int age) {
         this.name = name;
         this.colour = colour;
         this.age = age;
     }
+
+    public void bark() {
+        System.out.println("hau hau!");
+    }
+
 }

@@ -5,7 +5,7 @@ import java.util.List;
 public class Variables {
 
     int age = 5;
-
+    
     double height = 5.55;
 
     String name = "abc";

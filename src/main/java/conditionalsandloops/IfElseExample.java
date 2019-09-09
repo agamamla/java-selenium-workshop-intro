@@ -6,7 +6,6 @@ import inheritance.DogChild;
 
 public class IfElseExample {
 
-
     public void checkAnimal(DogChild dog) {
 
         if(dog.getName().equals("Burek")) {

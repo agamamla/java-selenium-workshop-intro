@@ -37,7 +37,7 @@ public class ExercisesTest {
     @Test
     public void checkAgeTest() {
         List<Animal> animals = createList();
-        
+
 
     }
 
