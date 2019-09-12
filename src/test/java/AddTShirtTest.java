@@ -1,21 +1,17 @@
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AddTShirtTest {
 
     public static WebDriver driver;
     private WebDriverWait wait;
-    private String url = "http://automationpractice.com/index.php";
+    private String url = "";
 
-    //specjalnie wrzucam tutaj binarkę, aby przy mówieniu o frameworku wspomniec o drive managerze bonigarcia ;)
     private void settUp() {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
         driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, 10);
     }
 
     private void tearDown() {
@@ -26,13 +22,27 @@ public class AddTShirtTest {
     public void addTShirtToCartFromWomanCategoryTest() {
         settUp();
 
-        driver.get(url);
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("block_top_menu")));
-        driver.findElement(By.cssSelector("#block_top_menu > ul > li > a")).click();
-        driver.findElement(By.partialLinkText("Faded Short Sleeve T-shirts")).click();
-        driver.findElement(By.cssSelector("button.exclusive")).click();
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div.button-container > a")));
-        driver.findElement(By.cssSelector("div.button-container > a")).click();
+        //open main page
+        //driver.get()
+
+        //sometimes page could load slowly, so it's good place to add some wait.
+        //What do you think about waiting for menu to be visible?
+
+        //find and click on Woman tab
+        //driver.findElement()...
+
+        //find and click on Faded Short Sleeve T-shirts tile
+        //driver.findElement()...
+
+        //find and click on button 'Add to cart'
+        //driver.findElement()...
+
+        /*now it's time to click on Proceed button but it's on additional pop up.
+        So let's wait for some condition! Which one would you like to use?
+         */
+
+        //ok, finally you can find and click on Proceed button
+        //driver.findElement()...
 
         tearDown();
     }
