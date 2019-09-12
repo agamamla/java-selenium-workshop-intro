@@ -11,6 +11,8 @@ public class AddTShirtTest {
     private WebDriverWait wait;
     private String url = "http://automationpractice.com/index.php";
 
+    private By proceedButtonLocator = By.cssSelector("div.button-container > a");
+
     //specjalnie wrzucam tutaj binarkę, aby przy mówieniu o frameworku wspomniec o drive managerze bonigarcia ;)
     private void settUp() {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
@@ -31,8 +33,8 @@ public class AddTShirtTest {
         driver.findElement(By.cssSelector("#block_top_menu > ul > li > a")).click();
         driver.findElement(By.partialLinkText("Faded Short Sleeve T-shirts")).click();
         driver.findElement(By.cssSelector("button.exclusive")).click();
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div.button-container > a")));
-        driver.findElement(By.cssSelector("div.button-container > a")).click();
+        wait.until(ExpectedConditions.elementToBeClickable(proceedButtonLocator));
+        driver.findElement(proceedButtonLocator).click();
 
         tearDown();
     }
