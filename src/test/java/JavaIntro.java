@@ -8,11 +8,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ExercisesTest {
+public class JavaIntro {
 
     private MyZoo myZoo = new MyZoo();
 
     private MySecondZoo mySecondZoo = new MySecondZoo();
+
+    @Test
+    public void helloWorld() {
+        System.out.println("Hello world!");
+    }
 
     @Test
     public void createDogsTest() {
