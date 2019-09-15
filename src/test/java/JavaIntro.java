@@ -43,7 +43,6 @@ public class JavaIntro {
     public void checkAgeTest() {
         List<Animal> animals = createList();
 
-
     }
 
     private List<Animal> createList() {
