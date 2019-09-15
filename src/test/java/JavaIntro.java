@@ -43,6 +43,33 @@ public class JavaIntro {
     public void checkAgeTest() {
         List<Animal> animals = createList();
 
+        for(int i = 0; i < animals.size(); i++) {
+            Animal animal = animals.get(i);
+            if(animal.getType().equals("Cat")){
+                animal.setAge(i);
+            }
+        }
+
+        for(Animal animal : animals) {
+            switch (animal.getAge()) {
+                case 0:
+                    System.out.println("Age equals 0");
+                    break;
+                case 1:
+                    System.out.println("Age equals 1");
+                    break;
+                case 2:
+                    System.out.println("Age equals 2");
+                    break;
+                case 3:
+                    System.out.println("Age equals 3");
+                    break;
+                case 4:
+                    System.out.println("Age equals 4");
+                    break;
+            }
+        }
+
     }
 
     private List<Animal> createList() {
