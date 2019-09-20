@@ -16,14 +16,14 @@ public class CompleteTests {
   public void click_dresses_success() {
     setDriver();
     driver.get("http://automationpractice.com/index.php");
-    driver.findElement(By.xpath("//a[@title='Dresses']"));
+    driver.findElement(By.xpath("//a[@title='Dresses']")).click();
   }
 
   @Test
   public void sendKeys_searchBox_success() {
     setDriver();
     driver.get("http://automationpractice.com/index.php");
-    driver.findElement(By.xpath("//input[@name='search_query']"));
+    driver.findElement(By.xpath("//input[@name='search_query']")).sendKeys("Dresses");
     driver.findElement(By.xpath("//button[@name='submit_search']")).click();
   }
 
@@ -32,7 +32,7 @@ public class CompleteTests {
   public void getText_firstProduct_success() {
     setDriver();
     driver.get("http://automationpractice.com/index.php");
-    driver.findElement(By.xpath("(//a[@class='product-name'])[1]"));
+    driver.findElement(By.xpath("(//a[@class='product-name'])[1]")).getText();
   }
 
   @Test
@@ -40,6 +40,7 @@ public class CompleteTests {
     setDriver();
     driver.get("http://automationpractice.com/index.php");
     // XPath to element (//a[@class="item-link"])[1]
+    driver.findElement(By.xpath("(//a[@class='item-link'])[1]")).click();
   }
 
 
